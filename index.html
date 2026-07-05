@@ -1,36 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JDWishLink</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>JDWishLink</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-  <div class="container">
+<header class="hero">
 
-    <h1>🎉 JDWishLink</h1>
-    <p>Create birthday wish pages in seconds</p>
+<h1>🎉 JDWishLink</h1>
 
-    <div class="card">
-      <h2>Create Birthday Event</h2>
+<p>Create beautiful celebration pages and collect heartfelt messages from everyone you care about.</p>
 
-      <input id="name" placeholder="Birthday person's name">
-      <input id="message" placeholder="Your birthday message">
+</header>
 
-      <button onclick="createEvent()">Generate Link</button>
+<section class="card">
 
-      <p id="result"></p>
-    </div>
+<h2>Create an Event</h2>
 
-    <footer>
-      Made with ❤️ by <strong>JeddyTech</strong>
-    </footer>
+<select id="eventType">
+<option value="">Select Event Type</option>
+<option>Birthday</option>
+<option>Wedding</option>
+<option>Anniversary</option>
+<option>Graduation</option>
+<option>Baby Shower</option>
+<option>Church Event</option>
+<option>Retirement</option>
+<option>Memorial</option>
+<option>House Warming</option>
+<option>Other</option>
+</select>
 
-  </div>
+<input
+type="text"
+id="recipientName"
+placeholder="Recipient's Name">
 
-  <script src="script.js"></script>
+<input
+type="text"
+id="eventTitle"
+placeholder="Event Title">
+
+<textarea
+id="eventMessage"
+placeholder="Write a short introduction..."></textarea>
+
+<input
+type="date"
+id="eventDate">
+
+<button id="createBtn">
+✨ Create Celebration Page
+</button>
+
+<div id="eventLink"></div>
+
+</section>
+
+<footer>
+
+<p>Made with ❤️ by <strong>JeddyTech</strong></p>
+
+</footer>
+
+<script type="module" src="script.js"></script>
+
 </body>
-  </html>
+                                    </html>
