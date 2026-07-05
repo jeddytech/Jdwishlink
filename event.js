@@ -104,3 +104,27 @@ sendWish.addEventListener("click", async () => {
 
 loadEvent();
 loadMessages();
+
+const copyBtn = document.getElementById("copyLink");
+const whatsappBtn = document.getElementById("shareWhatsApp");
+
+copyBtn.addEventListener("click", async () => {
+
+    await navigator.clipboard.writeText(window.location.href);
+
+    alert("Link copied successfully!");
+
+});
+
+whatsappBtn.addEventListener("click", () => {
+
+    const text =
+`You're invited to celebrate with me on JDWishLink!
+
+${window.location.href}`;
+
+    window.open(
+`https://wa.me/?text=${encodeURIComponent(text)}`,
+"_blank");
+
+});
